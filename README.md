@@ -5,7 +5,7 @@ Sample Results :
 
 Stroke width filled and run :
 
-![alt](/character_1.png)
+![alt](/characters_1.png)
 
 Final Bounding Box:
 
