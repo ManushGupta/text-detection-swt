@@ -83,7 +83,8 @@ Calculating Stroke Width Transform:
 
      For that reason, we pass along each non-discarded ray, where each pixel in the ray receives the minimal value between its current value, and the median value along that ray
 
-     ![alt](/median.png)
+
+![alt](/median.png)
    
 10) Morphology: Dilation:
     After calculation of SWT values and normalizing them to be between 0-255
@@ -143,9 +144,11 @@ PROBLEMS FACED
   After performing dilation on the image with a normal rectangular kernel[2x2] with all values as 1, many times two letter candidates are grouped into one component
   This poses a problem for the aspect ratio conditions in many images
   The proposed solution is to use a 3x3 kernel of the form:
-                                                            1   0   1
-                                                            0   0   1
-                                                            0   1   1
+                                                           [ [1   0   1]
+                                                           
+                                                            [0   0   1]
+                                                            
+                                                            [0   1   1]]
                                                             
 5) Size of font:
     When the bounding box of each letter is less than 0.0025% of the area of the image, such letters maybe recognized in SWT but will not be grouped into letter candidates because of the limiting condition
